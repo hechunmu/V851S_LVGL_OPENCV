@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod +x *)",
+      "Bash(make clean *)",
+      "Bash(make -j16)",
+      "Bash(/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/arm-openwrt-linux-strip --strip-all /home/ubuntu/lv_port_linux/build/bin/main)"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "files.associations": {
+        "lv_port_indev.h": "c",
+        "fcntl.h": "c",
+        "interface.h": "c",
+        "optional": "c",
+        "istream": "c",
+        "ostream": "c",
+        "ratio": "c",
+        "system_error": "c",
+        "array": "c",
+        "functional": "c",
+        "regex": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "stdlib.h": "c",
+        "string.h": "c",
+        "lv_100ask_lesson_demos.h": "c"
+    }
+}
