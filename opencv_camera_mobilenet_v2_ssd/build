@@ -1,0 +1,140 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+ROOT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+SRC_DIR="$ROOT_DIR/src"
+BUILD_DIR="$SRC_DIR/build"
+MAKEFILE_PATH="$SRC_DIR/Makefile"
+
+extract_make_var() {
+    local variable_name="$1"
+
+    awk -F'[[:space:]]*[:?]=[[:space:]]*' -v key="$variable_name" '
+        $1 ~ "^[[:space:]]*" key "[[:space:]]*$" {
+            value=$2
+            sub(/^[[:space:]]+/, "", value)
+            sub(/[[:space:]]+$/, "", value)
+            print value
+            exit
+        }
+    ' "$MAKEFILE_PATH"
+}
+
+CROSS_COMPILE_PATH="$(extract_make_var CROSS_COMPILE_PATH)"
+OPENCV_DIR="$(extract_make_var OPENCV_DIR)"
+STAGING_DIR="$(extract_make_var STAGING_DIR)"
+CC_BIN="arm-openwrt-linux-gcc"
+CXX_BIN="arm-openwrt-linux-g++"
+ERRORS=()
+
+fail() {
+    printf 'build: %s\n' "$1" >&2
+    exit 1
+}
+
+record_error() {
+    ERRORS+=("$1")
+}
+
+check_command() {
+    local command_name="$1"
+
+    if ! command -v "$command_name" >/dev/null 2>&1; then
+        record_error "missing required command: $command_name"
+    fi
+}
+
+check_directory() {
+    local dir_path="$1"
+    local label="$2"
+
+    if [[ ! -d "$dir_path" ]]; then
+        record_error "$label not found: $dir_path"
+    fi
+}
+
+ensure_legacy_sdk_path() {
+    local legacy_sdk_root="/home/ubuntu/v851s-tina"
+    local actual_sdk_root="/home/ubuntu/tina-v853-open"
+
+    if [[ -d "$STAGING_DIR" ]]; then
+        return
+    fi
+
+    if [[ "$STAGING_DIR" != "$legacy_sdk_root"/* ]]; then
+        return
+    fi
+
+    if [[ ! -d "$actual_sdk_root/out/v851s/lizard/openwrt/staging_dir/target" ]]; then
+        return
+    fi
+
+    if [[ -L "$legacy_sdk_root" && "$(readlink "$legacy_sdk_root")" == "$actual_sdk_root" ]]; then
+        return
+    fi
+
+    if [[ -e "$legacy_sdk_root" && ! -L "$legacy_sdk_root" ]]; then
+        record_error "legacy SDK root already exists and is not a symlink: $legacy_sdk_root"
+        return
+    fi
+
+    ln -sfn "$actual_sdk_root" "$legacy_sdk_root"
+    printf 'build: linked legacy SDK path %s -> %s\n' "$legacy_sdk_root" "$actual_sdk_root"
+}
+
+[[ -f "$SRC_DIR/CMakeLists.txt" ]] || record_error "missing build definition: $SRC_DIR/CMakeLists.txt"
+[[ -f "$MAKEFILE_PATH" ]] || record_error "missing build definition: $MAKEFILE_PATH"
+
+if [[ -n "$CROSS_COMPILE_PATH" ]]; then
+    export PATH="$CROSS_COMPILE_PATH:$PATH"
+fi
+
+ensure_legacy_sdk_path
+
+check_command cmake
+check_command "$CC_BIN"
+check_command "$CXX_BIN"
+check_directory "$CROSS_COMPILE_PATH" "CROSS_COMPILE_PATH from current config"
+check_directory "$OPENCV_DIR" "OpenCV directory from current config"
+
+if [[ ! -d "$STAGING_DIR" ]]; then
+    record_error "STAGING_DIR from current config not found: $STAGING_DIR"
+fi
+
+if (( ${#ERRORS[@]} > 0 )); then
+    for error_message in "${ERRORS[@]}"; do
+        printf 'build: %s\n' "$error_message" >&2
+    done
+
+    if [[ ! -d "$STAGING_DIR" ]]; then
+        printf 'build: restore the SDK path referenced by src/CMakeLists.txt and src/Makefile before running ./build\n' >&2
+    fi
+
+    exit 1
+fi
+
+printf 'Configuring build in %s\n' "$BUILD_DIR"
+cmake \
+    -S "$SRC_DIR" \
+    -B "$BUILD_DIR" \
+    -DCMAKE_SYSTEM_NAME=Linux \
+    -DCMAKE_C_COMPILER="$CC_BIN" \
+    -DCMAKE_CXX_COMPILER="$CXX_BIN"
+
+printf 'Building target\n'
+cmake --build "$BUILD_DIR"
+
+echo "Pushing to device via adb..."
+
+adb push src/build/opencv_camera_mobilenet_v2_ssd /tmp/
+
+echo "Pushing to device via adb..."
+
+adb push src/model/mobilenet_v2_ssd.nb /tmp/
+echo "Upload complete."
+
+echo "Opening adb shell..."
+adb shell
+
+printf 'Build complete: %s/opencv_camera_mobilenet_v2_ssd\n' "$BUILD_DIR"

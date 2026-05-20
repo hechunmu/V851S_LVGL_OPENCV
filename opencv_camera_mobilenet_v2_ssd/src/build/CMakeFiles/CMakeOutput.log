@@ -1,0 +1,418 @@
+The target system is: Linux -  - 
+The host system is: Linux - 5.15.0-139-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/arm-openwrt-linux-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/3.16.3/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/arm-openwrt-linux-g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/3.16.3/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_02791/fast && /usr/bin/make -f CMakeFiles/cmTC_02791.dir/build.make CMakeFiles/cmTC_02791.dir/build
+make[1]: Entering directory '/home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_02791.dir/testCCompiler.c.o
+/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/arm-openwrt-linux-gcc    -o CMakeFiles/cmTC_02791.dir/testCCompiler.c.o   -c /home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_02791
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02791.dir/link.txt --verbose=1
+/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/arm-openwrt-linux-gcc      CMakeFiles/cmTC_02791.dir/testCCompiler.c.o  -o cmTC_02791 
+make[1]: Leaving directory '/home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp'
+
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c9ed8/fast && /usr/bin/make -f CMakeFiles/cmTC_c9ed8.dir/build.make CMakeFiles/cmTC_c9ed8.dir/build
+make[1]: Entering directory '/home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o
+/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/arm-openwrt-linux-gcc   -v -o CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c
+Reading specs from /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/specs
+COLLECT_GCC=arm-openwrt-linux-muslgnueabi-gcc.bin
+Target: arm-openwrt-linux-muslgnueabi
+Configured with: /home/xuqiang/workspace/tina-old/out/v853-perf1/compile_dir/toolchain/gcc-8.3.0/configure --with-bugurl=https://dev.openwrt.org/ --with-pkgversion='OpenWrt/CodeSourcery GCC 8.3.0 2021.08' --prefix=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=arm-openwrt-linux-muslgnueabi --with-gnu-ld --enable-target-optspace --enable-libgomp --disable-libmudflap --disable-multilib --disable-nls --without-isl --without-cloog --with-host-libstdcxx=-lstdc++ --with-gmp=/home/xuqiang/workspace/tina-old/out/host --with-mpfr=/home/xuqiang/workspace/tina-old/out/host --with-mpc=/home/xuqiang/workspace/tina-old/out/host --disable-decimal-float --with-diagnostics-color=auto-if-env --disable-libssp --enable-__cxa_atexit --with-cpu=cortex-a7 --with-fpu=neon --with-float=hard --with-headers=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain/include --disable-libsanitizer --enable-languages=c,c++,fortran --enable-shared --enable-threads --with-slibdir=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain/lib --enable-lto --with-libelf=/home/xuqiang/workspace/tina-old/out/host
+Thread model: posix
+gcc version 8.3.0 (OpenWrt/CodeSourcery GCC 8.3.0 2021.08) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon'
+ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/cc1 -quiet -v -iprefix /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/ -idirafter /home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/include /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mcpu=cortex-a7 -mfloat-abi=hard -mfpu=neon -mtls-dialect=gnu -marm -march=armv7ve+neon -auxbase-strip CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o -version -o /tmp/cc5km054.s
+GNU C17 (OpenWrt/CodeSourcery GCC 8.3.0 2021.08) version 8.3.0 (arm-openwrt-linux-muslgnueabi)
+	compiled by GNU C version 4.8.4, GMP version 6.1.0, MPFR version 3.1.3, MPC version 1.0.3, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/sys-include"
+ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include"
+ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/sys-include
+ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include
+ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/include
+ /home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/include
+End of search list.
+GNU C17 (OpenWrt/CodeSourcery GCC 8.3.0 2021.08) version 8.3.0 (arm-openwrt-linux-muslgnueabi)
+	compiled by GNU C version 4.8.4, GMP version 6.1.0, MPFR version 3.1.3, MPC version 1.0.3, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: ba8cf98d2e1db16d0910042b094da43d
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon'
+ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/bin/as -v -march=armv7ve -mfloat-abi=hard -mfpu=neon -meabi=5 -o CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o /tmp/cc5km054.s
+GNU assembler version 2.28 (arm-openwrt-linux-muslgnueabi) using BFD version (GNU Binutils) 2.28
+COMPILER_PATH=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/bin/
+LIBRARY_PATH=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon'
+Linking C executable cmTC_c9ed8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c9ed8.dir/link.txt --verbose=1
+/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/arm-openwrt-linux-gcc     -v CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o  -o cmTC_c9ed8 
+Reading specs from /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/specs
+COLLECT_GCC=arm-openwrt-linux-muslgnueabi-gcc.bin
+COLLECT_LTO_WRAPPER=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/lto-wrapper
+Target: arm-openwrt-linux-muslgnueabi
+Configured with: /home/xuqiang/workspace/tina-old/out/v853-perf1/compile_dir/toolchain/gcc-8.3.0/configure --with-bugurl=https://dev.openwrt.org/ --with-pkgversion='OpenWrt/CodeSourcery GCC 8.3.0 2021.08' --prefix=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=arm-openwrt-linux-muslgnueabi --with-gnu-ld --enable-target-optspace --enable-libgomp --disable-libmudflap --disable-multilib --disable-nls --without-isl --without-cloog --with-host-libstdcxx=-lstdc++ --with-gmp=/home/xuqiang/workspace/tina-old/out/host --with-mpfr=/home/xuqiang/workspace/tina-old/out/host --with-mpc=/home/xuqiang/workspace/tina-old/out/host --disable-decimal-float --with-diagnostics-color=auto-if-env --disable-libssp --enable-__cxa_atexit --with-cpu=cortex-a7 --with-fpu=neon --with-float=hard --with-headers=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain/include --disable-libsanitizer --enable-languages=c,c++,fortran --enable-shared --enable-threads --with-slibdir=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain/lib --enable-lto --with-libelf=/home/xuqiang/workspace/tina-old/out/host
+Thread model: posix
+gcc version 8.3.0 (OpenWrt/CodeSourcery GCC 8.3.0 2021.08) 
+COMPILER_PATH=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/bin/
+LIBRARY_PATH=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c9ed8' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon'
+ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/collect2 -plugin /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/liblto_plugin.so -plugin-opt=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc47ECiM.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -dynamic-linker /lib/ld-musl-armhf.so.1 -X -m armelf_linux_eabi -o cmTC_c9ed8 /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crt1.o /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crti.o /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/crtbegin.o -L /home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib -rpath-link /home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib -L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0 -L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc -L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/crtend.o /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c9ed8' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon'
+make[1]: Leaving directory '/home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/sys-include]
+    add: [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include]
+    add: [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/include]
+    add: [/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/include]
+  end of search list found
+  collapse include dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/sys-include] ==> [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/sys-include]
+  collapse include dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include] ==> [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/include]
+  collapse include dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/include] ==> [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/include]
+  collapse include dir [/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/include] ==> [/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/include]
+  implicit include dirs: [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/sys-include;/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/include;/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/include;/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-openwrt-linux-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_c9ed8/fast && /usr/bin/make -f CMakeFiles/cmTC_c9ed8.dir/build.make CMakeFiles/cmTC_c9ed8.dir/build]
+  ignore line: [make[1]: Entering directory '/home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/arm-openwrt-linux-gcc   -v -o CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
+  ignore line: [Reading specs from /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/specs]
+  ignore line: [COLLECT_GCC=arm-openwrt-linux-muslgnueabi-gcc.bin]
+  ignore line: [Target: arm-openwrt-linux-muslgnueabi]
+  ignore line: [Configured with: /home/xuqiang/workspace/tina-old/out/v853-perf1/compile_dir/toolchain/gcc-8.3.0/configure --with-bugurl=https://dev.openwrt.org/ --with-pkgversion='OpenWrt/CodeSourcery GCC 8.3.0 2021.08' --prefix=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=arm-openwrt-linux-muslgnueabi --with-gnu-ld --enable-target-optspace --enable-libgomp --disable-libmudflap --disable-multilib --disable-nls --without-isl --without-cloog --with-host-libstdcxx=-lstdc++ --with-gmp=/home/xuqiang/workspace/tina-old/out/host --with-mpfr=/home/xuqiang/workspace/tina-old/out/host --with-mpc=/home/xuqiang/workspace/tina-old/out/host --disable-decimal-float --with-diagnostics-color=auto-if-env --disable-libssp --enable-__cxa_atexit --with-cpu=cortex-a7 --with-fpu=neon --with-float=hard --with-headers=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain/include --disable-libsanitizer --enable-languages=c,c++,fortran --enable-shared --enable-threads --with-slibdir=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain/lib --enable-lto --with-libelf=/home/xuqiang/workspace/tina-old/out/host]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.3.0 (OpenWrt/CodeSourcery GCC 8.3.0 2021.08) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon']
+  ignore line: [ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/cc1 -quiet -v -iprefix /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/ -idirafter /home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/include /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mcpu=cortex-a7 -mfloat-abi=hard -mfpu=neon -mtls-dialect=gnu -marm -march=armv7ve+neon -auxbase-strip CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o -version -o /tmp/cc5km054.s]
+  ignore line: [GNU C17 (OpenWrt/CodeSourcery GCC 8.3.0 2021.08) version 8.3.0 (arm-openwrt-linux-muslgnueabi)]
+  ignore line: [	compiled by GNU C version 4.8.4  GMP version 6.1.0  MPFR version 3.1.3  MPC version 1.0.3  isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/sys-include"]
+  ignore line: [ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include"]
+  ignore line: [ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/sys-include]
+  ignore line: [ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include]
+  ignore line: [ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/include]
+  ignore line: [ /home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (OpenWrt/CodeSourcery GCC 8.3.0 2021.08) version 8.3.0 (arm-openwrt-linux-muslgnueabi)]
+  ignore line: [	compiled by GNU C version 4.8.4  GMP version 6.1.0  MPFR version 3.1.3  MPC version 1.0.3  isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: ba8cf98d2e1db16d0910042b094da43d]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon']
+  ignore line: [ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/bin/as -v -march=armv7ve -mfloat-abi=hard -mfpu=neon -meabi=5 -o CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o /tmp/cc5km054.s]
+  ignore line: [GNU assembler version 2.28 (arm-openwrt-linux-muslgnueabi) using BFD version (GNU Binutils) 2.28]
+  ignore line: [COMPILER_PATH=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/bin/]
+  ignore line: [LIBRARY_PATH=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon']
+  ignore line: [Linking C executable cmTC_c9ed8]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c9ed8.dir/link.txt --verbose=1]
+  ignore line: [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/arm-openwrt-linux-gcc     -v CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o  -o cmTC_c9ed8 ]
+  ignore line: [Reading specs from /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/specs]
+  ignore line: [COLLECT_GCC=arm-openwrt-linux-muslgnueabi-gcc.bin]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/lto-wrapper]
+  ignore line: [Target: arm-openwrt-linux-muslgnueabi]
+  ignore line: [Configured with: /home/xuqiang/workspace/tina-old/out/v853-perf1/compile_dir/toolchain/gcc-8.3.0/configure --with-bugurl=https://dev.openwrt.org/ --with-pkgversion='OpenWrt/CodeSourcery GCC 8.3.0 2021.08' --prefix=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=arm-openwrt-linux-muslgnueabi --with-gnu-ld --enable-target-optspace --enable-libgomp --disable-libmudflap --disable-multilib --disable-nls --without-isl --without-cloog --with-host-libstdcxx=-lstdc++ --with-gmp=/home/xuqiang/workspace/tina-old/out/host --with-mpfr=/home/xuqiang/workspace/tina-old/out/host --with-mpc=/home/xuqiang/workspace/tina-old/out/host --disable-decimal-float --with-diagnostics-color=auto-if-env --disable-libssp --enable-__cxa_atexit --with-cpu=cortex-a7 --with-fpu=neon --with-float=hard --with-headers=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain/include --disable-libsanitizer --enable-languages=c,c++,fortran --enable-shared --enable-threads --with-slibdir=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain/lib --enable-lto --with-libelf=/home/xuqiang/workspace/tina-old/out/host]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.3.0 (OpenWrt/CodeSourcery GCC 8.3.0 2021.08) ]
+  ignore line: [COMPILER_PATH=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/bin/]
+  ignore line: [LIBRARY_PATH=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c9ed8' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon']
+  link line: [ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/collect2 -plugin /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/liblto_plugin.so -plugin-opt=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc47ECiM.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -dynamic-linker /lib/ld-musl-armhf.so.1 -X -m armelf_linux_eabi -o cmTC_c9ed8 /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crt1.o /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crti.o /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/crtbegin.o -L /home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib -rpath-link /home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib -L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0 -L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc -L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/crtend.o /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crtn.o]
+    arg [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc47ECiM.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-musl-armhf.so.1] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_c9ed8] ==> ignore
+    arg [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crt1.o] ==> ignore
+    arg [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crti.o] ==> ignore
+    arg [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/crtbegin.o] ==> ignore
+    arg [-L/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib] ==> dir [/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib]
+    arg [-rpath-link] ==> ignore
+    arg [/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib] ==> ignore
+    arg [-L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0] ==> dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0]
+    arg [-L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc] ==> dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc]
+    arg [-L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib] ==> dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib]
+    arg [CMakeFiles/cmTC_c9ed8.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/crtend.o] ==> ignore
+    arg [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crtn.o] ==> ignore
+  collapse library dir [/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib] ==> [/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib]
+  collapse library dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0] ==> [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0]
+  collapse library dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc] ==> [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/lib/gcc]
+  collapse library dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib] ==> [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib;/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0;/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/lib/gcc;/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/lib]
+  implicit fwks: []
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3fecd/fast && /usr/bin/make -f CMakeFiles/cmTC_3fecd.dir/build.make CMakeFiles/cmTC_3fecd.dir/build
+make[1]: Entering directory '/home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3fecd.dir/testCXXCompiler.cxx.o
+/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/arm-openwrt-linux-g++     -o CMakeFiles/cmTC_3fecd.dir/testCXXCompiler.cxx.o -c /home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_3fecd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3fecd.dir/link.txt --verbose=1
+/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/arm-openwrt-linux-g++       CMakeFiles/cmTC_3fecd.dir/testCXXCompiler.cxx.o  -o cmTC_3fecd 
+make[1]: Leaving directory '/home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp'
+
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4d1fb/fast && /usr/bin/make -f CMakeFiles/cmTC_4d1fb.dir/build.make CMakeFiles/cmTC_4d1fb.dir/build
+make[1]: Entering directory '/home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o
+/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/arm-openwrt-linux-g++    -v -o CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
+Reading specs from /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/specs
+COLLECT_GCC=arm-openwrt-linux-muslgnueabi-g++.bin
+Target: arm-openwrt-linux-muslgnueabi
+Configured with: /home/xuqiang/workspace/tina-old/out/v853-perf1/compile_dir/toolchain/gcc-8.3.0/configure --with-bugurl=https://dev.openwrt.org/ --with-pkgversion='OpenWrt/CodeSourcery GCC 8.3.0 2021.08' --prefix=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=arm-openwrt-linux-muslgnueabi --with-gnu-ld --enable-target-optspace --enable-libgomp --disable-libmudflap --disable-multilib --disable-nls --without-isl --without-cloog --with-host-libstdcxx=-lstdc++ --with-gmp=/home/xuqiang/workspace/tina-old/out/host --with-mpfr=/home/xuqiang/workspace/tina-old/out/host --with-mpc=/home/xuqiang/workspace/tina-old/out/host --disable-decimal-float --with-diagnostics-color=auto-if-env --disable-libssp --enable-__cxa_atexit --with-cpu=cortex-a7 --with-fpu=neon --with-float=hard --with-headers=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain/include --disable-libsanitizer --enable-languages=c,c++,fortran --enable-shared --enable-threads --with-slibdir=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain/lib --enable-lto --with-libelf=/home/xuqiang/workspace/tina-old/out/host
+Thread model: posix
+gcc version 8.3.0 (OpenWrt/CodeSourcery GCC 8.3.0 2021.08) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon'
+ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/cc1plus -quiet -v -iprefix /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/ -D_GNU_SOURCE -idirafter /home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/include /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mcpu=cortex-a7 -mfloat-abi=hard -mfpu=neon -mtls-dialect=gnu -marm -march=armv7ve+neon -auxbase-strip CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccVw67iW.s
+GNU C++14 (OpenWrt/CodeSourcery GCC 8.3.0 2021.08) version 8.3.0 (arm-openwrt-linux-muslgnueabi)
+	compiled by GNU C version 4.8.4, GMP version 6.1.0, MPFR version 3.1.3, MPC version 1.0.3, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0"
+ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0/arm-openwrt-linux-muslgnueabi"
+ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0/backward"
+ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/sys-include"
+ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include"
+ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0
+ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0/arm-openwrt-linux-muslgnueabi
+ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0/backward
+ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/sys-include
+ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include
+ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/include
+ /home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/include
+End of search list.
+GNU C++14 (OpenWrt/CodeSourcery GCC 8.3.0 2021.08) version 8.3.0 (arm-openwrt-linux-muslgnueabi)
+	compiled by GNU C version 4.8.4, GMP version 6.1.0, MPFR version 3.1.3, MPC version 1.0.3, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 1f79664b6b2f1c0411fcd94b4e316c9d
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon'
+ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/bin/as -v -march=armv7ve -mfloat-abi=hard -mfpu=neon -meabi=5 -o CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccVw67iW.s
+GNU assembler version 2.28 (arm-openwrt-linux-muslgnueabi) using BFD version (GNU Binutils) 2.28
+COMPILER_PATH=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/bin/
+LIBRARY_PATH=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon'
+Linking CXX executable cmTC_4d1fb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d1fb.dir/link.txt --verbose=1
+/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/arm-openwrt-linux-g++      -v CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_4d1fb 
+Reading specs from /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/specs
+COLLECT_GCC=arm-openwrt-linux-muslgnueabi-g++.bin
+COLLECT_LTO_WRAPPER=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/lto-wrapper
+Target: arm-openwrt-linux-muslgnueabi
+Configured with: /home/xuqiang/workspace/tina-old/out/v853-perf1/compile_dir/toolchain/gcc-8.3.0/configure --with-bugurl=https://dev.openwrt.org/ --with-pkgversion='OpenWrt/CodeSourcery GCC 8.3.0 2021.08' --prefix=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=arm-openwrt-linux-muslgnueabi --with-gnu-ld --enable-target-optspace --enable-libgomp --disable-libmudflap --disable-multilib --disable-nls --without-isl --without-cloog --with-host-libstdcxx=-lstdc++ --with-gmp=/home/xuqiang/workspace/tina-old/out/host --with-mpfr=/home/xuqiang/workspace/tina-old/out/host --with-mpc=/home/xuqiang/workspace/tina-old/out/host --disable-decimal-float --with-diagnostics-color=auto-if-env --disable-libssp --enable-__cxa_atexit --with-cpu=cortex-a7 --with-fpu=neon --with-float=hard --with-headers=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain/include --disable-libsanitizer --enable-languages=c,c++,fortran --enable-shared --enable-threads --with-slibdir=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain/lib --enable-lto --with-libelf=/home/xuqiang/workspace/tina-old/out/host
+Thread model: posix
+gcc version 8.3.0 (OpenWrt/CodeSourcery GCC 8.3.0 2021.08) 
+COMPILER_PATH=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/bin/
+LIBRARY_PATH=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4d1fb' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon'
+ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/collect2 -plugin /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/liblto_plugin.so -plugin-opt=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuY98iD.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -dynamic-linker /lib/ld-musl-armhf.so.1 -X -m armelf_linux_eabi -o cmTC_4d1fb /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crt1.o /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crti.o /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/crtbegin.o -L /home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib -rpath-link /home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib -L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0 -L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc -L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/crtend.o /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4d1fb' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon'
+make[1]: Leaving directory '/home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0]
+    add: [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0/arm-openwrt-linux-muslgnueabi]
+    add: [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0/backward]
+    add: [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/sys-include]
+    add: [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include]
+    add: [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/include]
+    add: [/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/include]
+  end of search list found
+  collapse include dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0] ==> [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/include/c++/8.3.0]
+  collapse include dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0/arm-openwrt-linux-muslgnueabi] ==> [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/include/c++/8.3.0/arm-openwrt-linux-muslgnueabi]
+  collapse include dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0/backward] ==> [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/include/c++/8.3.0/backward]
+  collapse include dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/sys-include] ==> [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/sys-include]
+  collapse include dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include] ==> [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/include]
+  collapse include dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/include] ==> [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/include]
+  collapse include dir [/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/include] ==> [/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/include]
+  implicit include dirs: [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/include/c++/8.3.0;/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/include/c++/8.3.0/arm-openwrt-linux-muslgnueabi;/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/include/c++/8.3.0/backward;/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/sys-include;/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/include;/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/include;/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-openwrt-linux-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_4d1fb/fast && /usr/bin/make -f CMakeFiles/cmTC_4d1fb.dir/build.make CMakeFiles/cmTC_4d1fb.dir/build]
+  ignore line: [make[1]: Entering directory '/home/ubuntu/opencv_camera_mobilenet_v2_ssd/src/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/arm-openwrt-linux-g++    -v -o CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Reading specs from /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/specs]
+  ignore line: [COLLECT_GCC=arm-openwrt-linux-muslgnueabi-g++.bin]
+  ignore line: [Target: arm-openwrt-linux-muslgnueabi]
+  ignore line: [Configured with: /home/xuqiang/workspace/tina-old/out/v853-perf1/compile_dir/toolchain/gcc-8.3.0/configure --with-bugurl=https://dev.openwrt.org/ --with-pkgversion='OpenWrt/CodeSourcery GCC 8.3.0 2021.08' --prefix=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=arm-openwrt-linux-muslgnueabi --with-gnu-ld --enable-target-optspace --enable-libgomp --disable-libmudflap --disable-multilib --disable-nls --without-isl --without-cloog --with-host-libstdcxx=-lstdc++ --with-gmp=/home/xuqiang/workspace/tina-old/out/host --with-mpfr=/home/xuqiang/workspace/tina-old/out/host --with-mpc=/home/xuqiang/workspace/tina-old/out/host --disable-decimal-float --with-diagnostics-color=auto-if-env --disable-libssp --enable-__cxa_atexit --with-cpu=cortex-a7 --with-fpu=neon --with-float=hard --with-headers=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain/include --disable-libsanitizer --enable-languages=c,c++,fortran --enable-shared --enable-threads --with-slibdir=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain/lib --enable-lto --with-libelf=/home/xuqiang/workspace/tina-old/out/host]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.3.0 (OpenWrt/CodeSourcery GCC 8.3.0 2021.08) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon']
+  ignore line: [ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/cc1plus -quiet -v -iprefix /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/ -D_GNU_SOURCE -idirafter /home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/include /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mcpu=cortex-a7 -mfloat-abi=hard -mfpu=neon -mtls-dialect=gnu -marm -march=armv7ve+neon -auxbase-strip CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccVw67iW.s]
+  ignore line: [GNU C++14 (OpenWrt/CodeSourcery GCC 8.3.0 2021.08) version 8.3.0 (arm-openwrt-linux-muslgnueabi)]
+  ignore line: [	compiled by GNU C version 4.8.4  GMP version 6.1.0  MPFR version 3.1.3  MPC version 1.0.3  isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0"]
+  ignore line: [ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0/arm-openwrt-linux-muslgnueabi"]
+  ignore line: [ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0/backward"]
+  ignore line: [ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/sys-include"]
+  ignore line: [ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include"]
+  ignore line: [ignoring duplicate directory "/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/../../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0]
+  ignore line: [ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0/arm-openwrt-linux-muslgnueabi]
+  ignore line: [ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include/c++/8.3.0/backward]
+  ignore line: [ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/sys-include]
+  ignore line: [ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/include]
+  ignore line: [ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/include]
+  ignore line: [ /home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++14 (OpenWrt/CodeSourcery GCC 8.3.0 2021.08) version 8.3.0 (arm-openwrt-linux-muslgnueabi)]
+  ignore line: [	compiled by GNU C version 4.8.4  GMP version 6.1.0  MPFR version 3.1.3  MPC version 1.0.3  isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 1f79664b6b2f1c0411fcd94b4e316c9d]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon']
+  ignore line: [ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/bin/as -v -march=armv7ve -mfloat-abi=hard -mfpu=neon -meabi=5 -o CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccVw67iW.s]
+  ignore line: [GNU assembler version 2.28 (arm-openwrt-linux-muslgnueabi) using BFD version (GNU Binutils) 2.28]
+  ignore line: [COMPILER_PATH=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/bin/]
+  ignore line: [LIBRARY_PATH=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon']
+  ignore line: [Linking CXX executable cmTC_4d1fb]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d1fb.dir/link.txt --verbose=1]
+  ignore line: [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/arm-openwrt-linux-g++      -v CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_4d1fb ]
+  ignore line: [Reading specs from /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/specs]
+  ignore line: [COLLECT_GCC=arm-openwrt-linux-muslgnueabi-g++.bin]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/lto-wrapper]
+  ignore line: [Target: arm-openwrt-linux-muslgnueabi]
+  ignore line: [Configured with: /home/xuqiang/workspace/tina-old/out/v853-perf1/compile_dir/toolchain/gcc-8.3.0/configure --with-bugurl=https://dev.openwrt.org/ --with-pkgversion='OpenWrt/CodeSourcery GCC 8.3.0 2021.08' --prefix=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=arm-openwrt-linux-muslgnueabi --with-gnu-ld --enable-target-optspace --enable-libgomp --disable-libmudflap --disable-multilib --disable-nls --without-isl --without-cloog --with-host-libstdcxx=-lstdc++ --with-gmp=/home/xuqiang/workspace/tina-old/out/host --with-mpfr=/home/xuqiang/workspace/tina-old/out/host --with-mpc=/home/xuqiang/workspace/tina-old/out/host --disable-decimal-float --with-diagnostics-color=auto-if-env --disable-libssp --enable-__cxa_atexit --with-cpu=cortex-a7 --with-fpu=neon --with-float=hard --with-headers=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain/include --disable-libsanitizer --enable-languages=c,c++,fortran --enable-shared --enable-threads --with-slibdir=/home/xuqiang/workspace/tina-old/out/v853-perf1/staging_dir/toolchain/lib --enable-lto --with-libelf=/home/xuqiang/workspace/tina-old/out/host]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.3.0 (OpenWrt/CodeSourcery GCC 8.3.0 2021.08) ]
+  ignore line: [COMPILER_PATH=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/bin/]
+  ignore line: [LIBRARY_PATH=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/:/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4d1fb' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=neon' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+neon']
+  link line: [ /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/collect2 -plugin /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/liblto_plugin.so -plugin-opt=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuY98iD.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -dynamic-linker /lib/ld-musl-armhf.so.1 -X -m armelf_linux_eabi -o cmTC_4d1fb /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crt1.o /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crti.o /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/crtbegin.o -L /home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib -rpath-link /home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib -L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0 -L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc -L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/crtend.o /home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crtn.o]
+    arg [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../libexec/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccuY98iD.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-musl-armhf.so.1] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_4d1fb] ==> ignore
+    arg [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crt1.o] ==> ignore
+    arg [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crti.o] ==> ignore
+    arg [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/crtbegin.o] ==> ignore
+    arg [-L/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib] ==> dir [/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib]
+    arg [-rpath-link] ==> ignore
+    arg [/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib] ==> ignore
+    arg [-L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0] ==> dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0]
+    arg [-L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc] ==> dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc]
+    arg [-L/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib] ==> dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib]
+    arg [CMakeFiles/cmTC_4d1fb.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/crtend.o] ==> ignore
+    arg [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib/crtn.o] ==> ignore
+  collapse library dir [/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib] ==> [/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib]
+  collapse library dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0] ==> [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0]
+  collapse library dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc] ==> [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/lib/gcc]
+  collapse library dir [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/../lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0/../../../../arm-openwrt-linux-muslgnueabi/lib] ==> [/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/home/ubuntu/v851s-tina/out/v851s/lizard/openwrt/staging_dir/target/usr/lib;/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/lib/gcc/arm-openwrt-linux-muslgnueabi/8.3.0;/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/lib/gcc;/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/arm-openwrt-linux-muslgnueabi/lib]
+  implicit fwks: []
+
+
