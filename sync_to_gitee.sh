@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
 cd "$(dirname "$0")"
 
@@ -32,7 +32,7 @@ if ! git remote get-url origin &>/dev/null; then
     exit 1
 fi
 
-if [ -z "$1" ]; then
+if [ "$#" -eq 0 ]; then
     MSG="sync $(date '+%Y-%m-%d_%H-%M-%S')"
 else
     MSG="$*"
@@ -50,7 +50,12 @@ else
     echo "[INFO] Nothing to commit"
 fi
 
-git pull --rebase origin master
+if git ls-remote --exit-code --heads origin master >/dev/null 2>&1; then
+    git pull --rebase origin master
+else
+    echo "[INFO] Remote branch master does not exist yet, skip pull"
+fi
+
 git push origin master
 
 echo "[OK] Sync completed"
