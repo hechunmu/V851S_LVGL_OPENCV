@@ -12,6 +12,13 @@ echo "Binary: $(ls -lh ${BINARY} | awk '{print $5, $9}')"
 echo ""
 echo "=== Pushing binary to device ==="
 
+adb shell '
+/etc/init.d/S99main stop 2>/dev/null || true
+killall main 2>/dev/null || true
+rm -f /usr/main
+sync
+'
+
 adb push ${BINARY} /usr/main
 adb shell "chmod +x /usr/main && echo '[OK] Binary installed: /usr/main'"
 
@@ -35,4 +42,12 @@ fi
 echo ""
 echo "=== Autostart configured ==="
 echo "Starting main on device now..."
-adb shell "killall main 2>/dev/null; /usr/main &"
+adb shell '
+if /etc/init.d/S99main restart 2>/dev/null; then
+    echo "[OK] main restarted via init script"
+else
+    killall main 2>/dev/null || true
+    /usr/main &
+    echo "[OK] main restarted directly"
+fi
+'

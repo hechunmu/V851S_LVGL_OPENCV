@@ -163,3 +163,8 @@ extern "C" int cam_is_open(void)
 {
     return s_cam_open;
 }
+
+extern "C" int cam_is_capturing(void)
+{
+    return s_capture;
+}

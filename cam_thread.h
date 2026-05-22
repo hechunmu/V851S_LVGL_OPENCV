@@ -34,6 +34,9 @@ int cam_copy_frame(uint32_t *dst, int *last_seq);
 /* Returns 1 if camera was successfully opened */
 int cam_is_open(void);
 
+/* Returns 1 if capture is active (camON pressed) */
+int cam_is_capturing(void);
+
 #ifdef __cplusplus
 }
 #endif

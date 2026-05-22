@@ -14,6 +14,7 @@ set(CMAKE_C_STANDARD 99) # LVGL officially supports C99 and above
 set(CMAKE_CXX_STANDARD 17) #C17
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+set(APP_SOURCES main.c mouse_cursor_icon.c app_gpio.c app_uart.c)
 add_subdirectory(lvgl)
 add_subdirectory(lv_100ask_lesson_demos)
 target_include_directories(lvgl PUBLIC ${PROJECT_SOURCE_DIR})
@@ -25,7 +26,7 @@ if (LV_USE_LINUX_DRM)
     pkg_check_modules(LIBDRM REQUIRED libdrm)
 
     target_include_directories(lvgl PUBLIC ${LIBDRM_INCLUDE_DIRS})
-    add_executable(lvglsim main.c mouse_cursor_icon.c)
+    add_executable(lvglsim ${APP_SOURCES})
     target_link_libraries(lvglsim lvgl lvgl::examples lvgl::demos lvgl::thorvg ${LIBDRM_LIBRARIES} m pthread)
 
 elseif (LV_USE_SDL)
@@ -36,7 +37,7 @@ elseif (LV_USE_SDL)
 
     target_include_directories(lvgl PRIVATE ${SDL2_INCLUDE_DIRS})
     target_include_directories(lvgl PRIVATE ${SDL2_IMAGE_INCLUDE_DIRS})
-    add_executable(lvglsim main.c mouse_cursor_icon.c)
+    add_executable(lvglsim ${APP_SOURCES})
     target_link_libraries(lvglsim lvgl lvgl::examples lvgl::demos lvgl::thorvg ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES} m pthread)
 
 elseif (LV_USE_WAYLAND)
@@ -54,8 +55,8 @@ elseif (LV_USE_WAYLAND)
 
     target_include_directories(lvgl PRIVATE ${PROJECT_SOURCE_DIR}
                                             "${PROJECT_SOURCE_DIR}/wl_protocols")
-    add_executable(lvglsim main.c ${WAYLAND_PROTOCOLS_SRC} 
-        mouse_cursor_icon.c backends/wayland.c)
+    add_executable(lvglsim ${APP_SOURCES} ${WAYLAND_PROTOCOLS_SRC}
+        backends/wayland.c)
     target_compile_definitions(lvglsim PRIVATE LV_CONF_INCLUDE_SIMPLE)
     target_link_libraries(lvglsim lvgl lvgl::examples lvgl::demos lvgl::thorvg m
         wayland-client wayland-cursor xkbcommon)
@@ -63,7 +64,7 @@ elseif (LV_USE_WAYLAND)
 else()
 
     # No specific build steps required for FBDEV
-    add_executable(lvglsim main.c mouse_cursor_icon.c)
+    add_executable(lvglsim ${APP_SOURCES})
     target_link_libraries(lvglsim lv_100ask_lesson_demos lvgl lvgl::examples lvgl::demos lvgl::thorvg m pthread)
 endif()
 

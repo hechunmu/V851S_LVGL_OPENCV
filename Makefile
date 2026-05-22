@@ -10,7 +10,8 @@ STRIP  = arm-openwrt-linux-strip
 LVGL_DIR_NAME ?= lvgl
 LVGL_DIR      ?= .
 
-OPENCV_DIR = /home/ubuntu/opencv-mobile-4.11.0-yuzuki-lizard
+OPENCV_DIR    = /home/ubuntu/opencv-mobile-4.11.0-yuzuki-lizard
+STAGING_DIR   = /home/ubuntu/tina-v853-open/out/v851s/lizard/openwrt/staging_dir/target
 
 WARNINGS := -Wall -Wshadow -Wundef -Wmissing-prototypes -Wno-discarded-qualifiers \
             -Wextra -Wno-unused-function -Wno-error=strict-prototypes -Wpointer-arith \
@@ -25,19 +26,23 @@ WARNINGS := -Wall -Wshadow -Wundef -Wmissing-prototypes -Wno-discarded-qualifier
 
 CFLAGS ?= -Os -g0 -I$(LVGL_DIR)/ $(WARNINGS) -ffunction-sections -fdata-sections
 CFLAGS += -I$(OPENCV_DIR)/include -I$(OPENCV_DIR)/include/opencv4
+CFLAGS += -I$(STAGING_DIR)/usr/include
 
 # C++ flags: same base but c++17 instead of gnu99, strip C-only warning flags
 CXXFLAGS = -Os -g0 -I$(LVGL_DIR)/ \
            -I$(OPENCV_DIR)/include -I$(OPENCV_DIR)/include/opencv4 \
+           -I$(STAGING_DIR)/usr/include \
            -Wall -Wno-unused-parameter -Wno-shadow \
            -fno-strict-aliasing -ffunction-sections -fdata-sections -std=c++17
 
 LDFLAGS = -lm -lpthread -lrt -ldl -lstdc++ \
           -Wl,--gc-sections \
+          -L$(STAGING_DIR)/usr/lib \
           -Wl,--start-group \
           $(OPENCV_DIR)/lib/libopencv_core.a \
           $(OPENCV_DIR)/lib/libopencv_highgui.a \
           $(OPENCV_DIR)/lib/libopencv_imgproc.a \
+          -ljpeg \
           -Wl,--end-group
 
 BIN         = main
@@ -55,9 +60,12 @@ include $(LVGL_DIR)/lvgl/lvgl.mk
 include $(LVGL_DIR)/lv_100ask_lesson_demos/lv_100ask_lesson_demos.mk
 
 CSRCS   += $(LVGL_DIR)/mouse_cursor_icon.c
+CSRCS   += ./app_gpio.c
+CSRCS   += ./app_uart.c
 
-# Camera thread (C++)
+# Camera thread + MJPEG streaming thread (C++)
 CXXSRCS += ./cam_thread.cpp
+CXXSRCS += ./stream_thread.cpp
 
 OBJEXT ?= .o
 

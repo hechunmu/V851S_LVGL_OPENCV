@@ -1,18 +1,41 @@
 #!/bin/sh /etc/rc.common
-# Auto-start LVGL main application on boot (TinaLinux / OpenWrt procd)
 
 START=99
 STOP=10
 
-USE_PROCD=1
+PROG="/usr/main"
+PIDFILE="/var/run/main.pid"
+LOGFILE="/tmp/main.log"
 
-PROG=/usr/main
+start() {
+    if [ ! -x "$PROG" ]; then
+        echo "[S99main] missing $PROG" >&2
+        return 1
+    fi
 
-start_service() {
-    procd_open_instance
-    procd_set_param command $PROG
-    procd_set_param stdout 1
-    procd_set_param stderr 1
-    procd_set_param respawn ${respawn_threshold:-3600} ${respawn_timeout:-5} ${respawn_retry:-5}
-    procd_close_instance
+    stop
+
+    : > "$LOGFILE"
+    "$PROG" >>"$LOGFILE" 2>&1 &
+    pid=$!
+    echo "$pid" > "$PIDFILE"
+
+    sleep 1
+    if ! kill -0 "$pid" 2>/dev/null; then
+        echo "[S99main] $PROG exited early, see $LOGFILE" >&2
+        rm -f "$PIDFILE"
+        return 1
+    fi
+}
+
+stop() {
+    if [ -f "$PIDFILE" ]; then
+        pid=$(cat "$PIDFILE" 2>/dev/null)
+        if [ -n "$pid" ]; then
+            kill "$pid" 2>/dev/null || true
+        fi
+        rm -f "$PIDFILE"
+    fi
+
+    killall main 2>/dev/null || true
 }
