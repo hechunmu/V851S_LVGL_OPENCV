@@ -7,7 +7,9 @@
       "Bash(/home/ubuntu/tina-v853-open/prebuilt/rootfsbuilt/arm/toolchain-sunxi-musl-gcc-830/toolchain/bin/arm-openwrt-linux-strip --strip-all /home/ubuntu/lv_port_linux/build/bin/main)",
       "Read(//home/ubuntu/opencv-mobile-4.11.0-yuzuki-lizard/lib/**)",
       "Read(//home/ubuntu/opencv-mobile-4.11.0-yuzuki-lizard/include/opencv4/opencv2/**)",
-      "Bash(make)"
+      "Bash(make)",
+      "Bash(python3 -c ' *)",
+      "Bash(timeout 60 ./build.sh)"
     ]
   }
 }

@@ -295,42 +295,86 @@ void app_gpio_apply_output(uint32_t id, bool enable, bool sync_ui)
     if (sync_ui) gpio_schedule_button_sync(id, enable);
 }
 
-void app_gpio_create_button_panel(app_gpio_button_handler_t handler, void *user_data)
+static const char *gpio_icons[APP_GPIO_OUTPUT_COUNT] = {
+    [APP_GPIO_VALVE1]  = LV_SYMBOL_TINT,
+    [APP_GPIO_VALVE2]  = LV_SYMBOL_TINT,
+    [APP_GPIO_VALVE3]  = LV_SYMBOL_TINT,
+    [APP_GPIO_MAGNET]  = LV_SYMBOL_CHARGE,
+    [APP_GPIO_STEPPER] = LV_SYMBOL_SETTINGS,
+    [APP_GPIO_CAMERA]  = LV_SYMBOL_IMAGE,
+};
+
+void app_gpio_create_button_panel(lv_obj_t *parent,
+                                  app_gpio_button_handler_t handler,
+                                  void *user_data)
 {
-    lv_obj_t *cont = lv_obj_create(lv_scr_act());
     uint32_t i;
 
-    g_button_handler = handler;
+    g_button_handler           = handler;
     g_button_handler_user_data = user_data;
 
-    lv_obj_set_size(cont, 280, 200);
-    lv_obj_set_pos(cont, 505, 10);
-    lv_obj_set_layout(cont, LV_LAYOUT_FLEX);
-    lv_obj_set_flex_flow(cont, LV_FLEX_FLOW_ROW_WRAP);
-    lv_obj_set_flex_align(cont, LV_FLEX_ALIGN_START,
+    /* Configure flex layout on the provided parent */
+    lv_obj_set_layout(parent, LV_LAYOUT_FLEX);
+    lv_obj_set_flex_flow(parent, LV_FLEX_FLOW_ROW_WRAP);
+    lv_obj_set_flex_align(parent, LV_FLEX_ALIGN_SPACE_EVENLY,
                           LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
-    lv_obj_set_style_pad_all(cont, 8, 0);
-    lv_obj_set_style_pad_column(cont, 8, 0);
-    lv_obj_set_style_pad_row(cont, 8, 0);
-    lv_obj_clear_flag(cont, LV_OBJ_FLAG_SCROLLABLE);
+    /* Extra left pad (50px) so buttons are away from the physical touch dead zone
+     * that exists on the left logical edge (= physical top edge after 90° rotation) */
+    lv_obj_set_style_pad_left(parent, 50, 0);
+    lv_obj_set_style_pad_right(parent, 16, 0);
+    lv_obj_set_style_pad_top(parent, 16, 0);
+    lv_obj_set_style_pad_bottom(parent, 16, 0);
+    lv_obj_set_style_pad_column(parent, 16, 0);
+    lv_obj_set_style_pad_row(parent, 16, 0);
+    lv_obj_clear_flag(parent, LV_OBJ_FLAG_SCROLLABLE);
 
     for (i = 0; i < APP_GPIO_OUTPUT_COUNT; i++) {
-        lv_obj_t *btn = lv_button_create(cont);
-        lv_obj_t *label;
-
+        lv_obj_t *btn = lv_button_create(parent);
         lv_obj_add_flag(btn, LV_OBJ_FLAG_CHECKABLE);
         lv_obj_clear_flag(btn, LV_OBJ_FLAG_SCROLLABLE);
-        lv_obj_set_size(btn, 120, 50);
+        lv_obj_set_size(btn, 228, 168);
+
+        /* OFF style */
+        lv_obj_set_style_bg_color(btn, lv_color_hex(0x0E1826), 0);
+        lv_obj_set_style_bg_opa(btn, LV_OPA_COVER, 0);
+        lv_obj_set_style_border_color(btn, lv_color_hex(0x1C3450), 0);
+        lv_obj_set_style_border_width(btn, 1, 0);
+        lv_obj_set_style_radius(btn, 14, 0);
+        lv_obj_set_style_shadow_width(btn, 0, 0);
+
+        /* ON style — green glow */
+        lv_obj_set_style_bg_color(btn, lv_color_hex(0x0A2B1A), LV_STATE_CHECKED);
+        lv_obj_set_style_border_color(btn, lv_color_hex(0x00FF94), LV_STATE_CHECKED);
+        lv_obj_set_style_border_width(btn, 2, LV_STATE_CHECKED);
+        lv_obj_set_style_shadow_color(btn, lv_color_hex(0x00FF94), LV_STATE_CHECKED);
+        lv_obj_set_style_shadow_width(btn, 18, LV_STATE_CHECKED);
+        lv_obj_set_style_shadow_spread(btn, 2, LV_STATE_CHECKED);
+        lv_obj_set_style_shadow_opa(btn, LV_OPA_60, LV_STATE_CHECKED);
+
+        /* Flex column inside */
+        lv_obj_set_layout(btn, LV_LAYOUT_FLEX);
+        lv_obj_set_flex_flow(btn, LV_FLEX_FLOW_COLUMN);
+        lv_obj_set_flex_align(btn, LV_FLEX_ALIGN_CENTER,
+                              LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
+        lv_obj_set_style_pad_all(btn, 12, 0);
+        lv_obj_set_style_pad_row(btn, 10, 0);
+
         lv_obj_add_event_cb(btn, gpio_btn_event_cb, LV_EVENT_VALUE_CHANGED,
                             (void *)(uintptr_t)i);
         g_gpio_buttons[i] = btn;
 
-        label = lv_label_create(btn);
-        lv_label_set_text(label, g_gpio_outputs[i].label);
-        lv_obj_center(label);
+        /* Icon */
+        lv_obj_t *icon = lv_label_create(btn);
+        lv_label_set_text(icon, gpio_icons[i]);
+        lv_obj_set_style_text_font(icon, &lv_font_montserrat_36, 0);
+        lv_obj_set_style_text_color(icon, lv_color_hex(0x00D4FF), 0);
+
+        /* Label */
+        lv_obj_t *lbl = lv_label_create(btn);
+        lv_label_set_text(lbl, g_gpio_outputs[i].label);
+        lv_obj_set_style_text_font(lbl, &lv_font_montserrat_14, 0);
+        lv_obj_set_style_text_color(lbl, lv_color_hex(0xA0C4DC), 0);
 
         if (g_gpio_state[i]) lv_obj_add_state(btn, LV_STATE_CHECKED);
-        lv_obj_set_style_bg_color(btn, lv_palette_main(LV_PALETTE_GREEN),
-                                  LV_PART_MAIN | LV_STATE_CHECKED);
     }
 }

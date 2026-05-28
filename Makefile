@@ -62,6 +62,7 @@ include $(LVGL_DIR)/lv_100ask_lesson_demos/lv_100ask_lesson_demos.mk
 CSRCS   += $(LVGL_DIR)/mouse_cursor_icon.c
 CSRCS   += ./app_gpio.c
 CSRCS   += ./app_uart.c
+CSRCS   += ./wifi_manager.c
 
 # Camera thread + MJPEG streaming thread (C++)
 CXXSRCS += ./cam_thread.cpp
