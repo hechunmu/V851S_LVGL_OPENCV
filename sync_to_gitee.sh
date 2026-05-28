@@ -16,8 +16,17 @@ if ! git rev-parse --is-inside-work-tree &>/dev/null; then
     exit 1
 fi
 
-BRANCH=$(git branch --show-current)
-[ -z "$BRANCH" ] && BRANCH=master
+if [ -d "$(git rev-parse --git-path rebase-apply)" ] || [ -d "$(git rev-parse --git-path rebase-merge)" ]; then
+    echo "[ERROR] Git rebase is in progress"
+    echo "[ERROR] Please run git rebase --continue, --abort, or --skip first"
+    exit 1
+fi
+
+if ! BRANCH=$(git symbolic-ref --quiet --short HEAD 2>/dev/null); then
+    echo "[ERROR] HEAD is detached"
+    echo "[ERROR] Please switch back to branch master first"
+    exit 1
+fi
 
 if [ "$BRANCH" != "master" ]; then
     echo "[ERROR] Current branch is $BRANCH"
