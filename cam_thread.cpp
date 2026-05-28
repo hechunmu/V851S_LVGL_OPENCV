@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <vector>
 
 using namespace cv;
 
@@ -26,6 +27,11 @@ static pthread_t       s_tid       = 0;
 static volatile int    s_exit      = 0;   /* set to 1 to kill thread   */
 static volatile int    s_capture   = 0;   /* set to 1 to deliver frames */
 static volatile int    s_cam_open  = 0;   /* 1 after camera opened OK  */
+
+/* Recording state */
+static FILE           *s_rec_file     = NULL;
+static volatile int    s_recording    = 0;
+static pthread_mutex_t s_rec_mutex    = PTHREAD_MUTEX_INITIALIZER;
 
 /* ------------------------------------------------------------------ */
 /*  Frame transform: resize + 90° rotation into canvas layout          */
@@ -53,6 +59,15 @@ static void write_frame(const Mat &frame)
     memcpy(s_buf, tmp, sizeof(s_buf));
     s_seq++;
     pthread_mutex_unlock(&s_mutex);
+
+    if (s_recording) {
+        std::vector<uchar> jpeg_buf;
+        cv::imencode(".jpg", scaled, jpeg_buf);
+        pthread_mutex_lock(&s_rec_mutex);
+        if (s_rec_file)
+            fwrite(jpeg_buf.data(), 1, jpeg_buf.size(), s_rec_file);
+        pthread_mutex_unlock(&s_rec_mutex);
+    }
 }
 
 /* ------------------------------------------------------------------ */
@@ -164,7 +179,64 @@ extern "C" int cam_is_open(void)
     return s_cam_open;
 }
 
+<<<<<<< HEAD
 extern "C" int cam_is_capturing(void)
 {
     return s_capture;
+=======
+extern "C" int cam_save_photo(const char *path)
+{
+    static uint32_t photo_buf[CAM_H * CAM_W];
+    pthread_mutex_lock(&s_mutex);
+    memcpy(photo_buf, s_buf, sizeof(photo_buf));
+    pthread_mutex_unlock(&s_mutex);
+
+    /* Convert XRGB8888 canvas buffer to BGR Mat */
+    Mat bgr(CAM_H, CAM_W, CV_8UC3);
+    for (int y = 0; y < CAM_H; y++) {
+        Vec3b *row = bgr.ptr<Vec3b>(y);
+        const uint32_t *src = photo_buf + y * CAM_W;
+        for (int x = 0; x < CAM_W; x++) {
+            uint32_t px = src[x];
+            row[x] = Vec3b(px & 0xFF, (px >> 8) & 0xFF, (px >> 16) & 0xFF);
+        }
+    }
+
+    if (!cv::imwrite(path, bgr)) {
+        fprintf(stderr, "[cam] 照片保存失败: %s\n", path);
+        return -1;
+    }
+    fprintf(stderr, "[cam] 照片已保存: %s\n", path);
+    return 0;
+}
+
+extern "C" int cam_record_start(const char *path)
+{
+    pthread_mutex_lock(&s_rec_mutex);
+    if (s_rec_file) { fclose(s_rec_file); s_rec_file = NULL; }
+    s_rec_file = fopen(path, "wb");
+    if (!s_rec_file) {
+        pthread_mutex_unlock(&s_rec_mutex);
+        fprintf(stderr, "[cam] 录像文件打开失败: %s\n", path);
+        return -1;
+    }
+    s_recording = 1;
+    pthread_mutex_unlock(&s_rec_mutex);
+    fprintf(stderr, "[cam] 开始录像: %s\n", path);
+    return 0;
+}
+
+extern "C" void cam_record_stop(void)
+{
+    pthread_mutex_lock(&s_rec_mutex);
+    s_recording = 0;
+    if (s_rec_file) { fclose(s_rec_file); s_rec_file = NULL; }
+    pthread_mutex_unlock(&s_rec_mutex);
+    fprintf(stderr, "[cam] 录像已停止\n");
+}
+
+extern "C" int cam_is_recording(void)
+{
+    return s_recording;
+>>>>>>> sync 2026-05-27_21-59-26
 }

@@ -23,7 +23,11 @@
 #include <sys/select.h>
 #include <signal.h>
 #include <sys/types.h>
+<<<<<<< HEAD
 #include <termios.h>
+=======
+#include <time.h>
+>>>>>>> sync 2026-05-27_21-59-26
 
 static volatile sig_atomic_t g_app_running = 1;
 
@@ -134,6 +138,51 @@ static void stop_btn_event_cb(lv_event_t *e)
     memset(g_cam_buf, 0, sizeof(g_cam_buf));
 }
 
+static void make_timestamped_path(char *buf, size_t sz, const char *dir,
+                                  const char *prefix, const char *ext)
+{
+    time_t now = time(NULL);
+    struct tm *t = localtime(&now);
+    snprintf(buf, sz, "%s/%s_%04d%02d%02d_%02d%02d%02d.%s",
+             dir, prefix,
+             t->tm_year + 1900, t->tm_mon + 1, t->tm_mday,
+             t->tm_hour, t->tm_min, t->tm_sec,
+             ext);
+}
+
+static void photo_btn_event_cb(lv_event_t *e)
+{
+    if (lv_event_get_code(e) != LV_EVENT_CLICKED) return;
+    if (!g_cam_active) {
+        fprintf(stderr, "[ui] 摄像头未启动，无法拍照\n");
+        return;
+    }
+    char path[128];
+    make_timestamped_path(path, sizeof(path), "/mnt/extsd", "photo", "jpg");
+    cam_save_photo(path);
+}
+
+static lv_obj_t *g_rec_label = NULL;
+
+static void record_btn_event_cb(lv_event_t *e)
+{
+    if (lv_event_get_code(e) != LV_EVENT_CLICKED) return;
+    if (!g_cam_active) {
+        fprintf(stderr, "[ui] 摄像头未启动，无法录像\n");
+        return;
+    }
+    if (!cam_is_recording()) {
+        char path[128];
+        make_timestamped_path(path, sizeof(path), "/mnt/extsd", "video", "mjpeg");
+        if (cam_record_start(path) == 0 && g_rec_label)
+            lv_label_set_text(g_rec_label, "停止录像");
+    } else {
+        cam_record_stop();
+        if (g_rec_label)
+            lv_label_set_text(g_rec_label, "开始录像");
+    }
+}
+
 /* ------------------------------------------------------------------ */
 /*  UI panels (right side: x=500, logical 800×480)                     */
 /* ------------------------------------------------------------------ */
@@ -145,26 +194,48 @@ static void lv_demo_gpio_button(void)
 static void lv_demo_cam_button(void)
 {
     lv_obj_t *cont = lv_obj_create(lv_scr_act());
-    lv_obj_set_size(cont, 280, 80);
-    lv_obj_set_pos(cont, 505, 225);
-    lv_obj_set_flex_flow(cont, LV_FLEX_FLOW_ROW);
-    lv_obj_set_style_pad_all(cont, 10, 0);
-    lv_obj_set_style_pad_column(cont, 10, 0);
+    lv_obj_set_size(cont, 280, 160);
+    lv_obj_set_pos(cont, 505, 220);
+    lv_obj_set_layout(cont, LV_LAYOUT_FLEX);
+    lv_obj_set_flex_flow(cont, LV_FLEX_FLOW_ROW_WRAP);
+    lv_obj_set_flex_align(cont, LV_FLEX_ALIGN_START,
+                          LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
+    lv_obj_set_style_pad_all(cont, 8, 0);
+    lv_obj_set_style_pad_column(cont, 8, 0);
+    lv_obj_set_style_pad_row(cont, 8, 0);
     lv_obj_clear_flag(cont, LV_OBJ_FLAG_SCROLLABLE);
 
+    /* Row 1: camON / camOFF */
     lv_obj_t *btn_on = lv_button_create(cont);
     lv_obj_set_size(btn_on, 120, 50);
     lv_obj_add_event_cb(btn_on, start_btn_event_cb, LV_EVENT_CLICKED, NULL);
-    lv_obj_t *lbl1 = lv_label_create(btn_on);
-    lv_label_set_text(lbl1, "camON");
-    lv_obj_center(lbl1);
+    lv_obj_t *lbl_on = lv_label_create(btn_on);
+    lv_label_set_text(lbl_on, "camON");
+    lv_obj_center(lbl_on);
 
     lv_obj_t *btn_off = lv_button_create(cont);
     lv_obj_set_size(btn_off, 120, 50);
     lv_obj_add_event_cb(btn_off, stop_btn_event_cb, LV_EVENT_CLICKED, NULL);
-    lv_obj_t *lbl2 = lv_label_create(btn_off);
-    lv_label_set_text(lbl2, "camOFF");
-    lv_obj_center(lbl2);
+    lv_obj_t *lbl_off = lv_label_create(btn_off);
+    lv_label_set_text(lbl_off, "camOFF");
+    lv_obj_center(lbl_off);
+
+    /* Row 2: 拍照 / 录像 */
+    lv_obj_t *btn_photo = lv_button_create(cont);
+    lv_obj_set_size(btn_photo, 120, 50);
+    lv_obj_add_event_cb(btn_photo, photo_btn_event_cb, LV_EVENT_CLICKED, NULL);
+    lv_obj_set_style_bg_color(btn_photo, lv_palette_main(LV_PALETTE_BLUE), 0);
+    lv_obj_t *lbl_photo = lv_label_create(btn_photo);
+    lv_label_set_text(lbl_photo, "photo");
+    lv_obj_center(lbl_photo);
+
+    lv_obj_t *btn_rec = lv_button_create(cont);
+    lv_obj_set_size(btn_rec, 120, 50);
+    lv_obj_add_event_cb(btn_rec, record_btn_event_cb, LV_EVENT_CLICKED, NULL);
+    lv_obj_set_style_bg_color(btn_rec, lv_palette_main(LV_PALETTE_RED), 0);
+    g_rec_label = lv_label_create(btn_rec);
+    lv_label_set_text(g_rec_label, "Video");
+    lv_obj_center(g_rec_label);
 }
 
 static void app_signal_handler(int signum)
